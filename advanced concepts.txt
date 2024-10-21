@@ -1,0 +1,61 @@
+Delegates :>
+The delegate is a reference type data type that defines the method signature.
+steps:
+	Declare a delegate
+	Create an instance and reference a method
+	Invoke a delegate
+
+func delegate:>
+generic delegate types Func and Action
+Func is a generic delegate included in the System namespace.
+
+Action delegate:>
+Action is a delegate type defined in the System namespace.it has not return value
+
+Predicate delegate:
+	A predicate delegate methods must take one input parameter and return a Boolean
+
+Anonymous method:
+	an anonymous method is a method without a name. Anonymous methods in C# can be defined using the delegate keyword and can be assigned to a variable of delegate type.
+
+Events: An event is a wrapper around a delegate. It depends on the delegate.
+
+
+			ADO .NET Basics>>>>
+
+ADO .NET is a data access technology that enables communication between relational and non relational systems.
+
+works: it separates data access from data manipulation  into distinct components that can be used together  or separately. 
+
+components: DataSet,DataReader
+
+The ADO.NET DataSet is explicitly designed for data access independent of any data source.
+DataReader: Retrieving data using ..
+
+ADO command object:
+	The ADO Command object is used to execute a single query against a database. The query can perform actions like creating, adding, retrieving, deleting or updating records.
+
+Parameter object:
+	The ADO Parameter object provides information about a single parameter used in a stored procedure or query. 
+
+In ADO.NET, you can handle transactions using the Connection object:
+Start a transaction: Use the BeginTransaction method to start a local transaction
+Enlist a command: Use the Transaction property of a Command object to enlist a command in the transaction
+Commit or roll back: Based on the success or failure of the transaction, you can commit or roll back the modifications made to the data source
+
+Data connection :The ADO Connection Object is used to create an open connection to a data source. Through this connection, you can access and manipulate a database.
+
+
+DataReader
+A DataReader is a lightweight, read-only, forward-only object that provides a connected stream of data from a database. It's a good choice when data needs to be retrieved and displayed in a list, such as a dropdown list or read-only DataGrid. However, the connection must be open while accessing the data.
+DataSet
+A DataSet is a collection of data items that can be edited, sorted, filtered, or searched. It's a good choice when data needs to be passed without a connection to a database, or when rich features for manipulating the data are required. However, the data remains in memory for as long as it's used.  
+
+DataAdapter
+Retrieves data from a data source and populates tables within a DataSet. It also updates changes made to the DataSet back to the data source.
+DataTable
+A table within a DataSet that can be populated by a DataAdapter.
+
+connection pool: 
+	most applications use only one or a few different configurations for connections. This means that during application execution, many identical connections will be repeatedly opened and closed. To minimize the cost of opening connections, ADO.NET uses an optimization technique called connection pooling.
+
